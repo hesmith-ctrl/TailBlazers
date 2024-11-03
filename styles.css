@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #cfe8a9, #a7d17d, #6b8e5f); /* Green tones for an outdoors look */
+    color: #2e4053;
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Animated background effect */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+    background-color: #557a5e; /* Earthy green */
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.logo-container img {
+    width: 130px;
+    height: auto;
+    margin-bottom: 1rem;
+    animation: rotate 8s infinite linear;
+}
+
+/* Rotating logo animation */
+.rotating-logo {
+    animation: rotate 8s infinite linear;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Header Text Styling */
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.25rem;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* Announcement section */
+.announcement-top {
+    text-align: center;
+    background-color: #6b8e5f;
+    color: white;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.announcement-top h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #557a5e;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.donate-button {
+    background-color: #557a5e;
+    color: white;
+    padding: 0.75rem 2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: background-color 0.3s ease;
+}
+
+.donate-button:hover {
+    background-color: #46694d;
+}
+
+/* Services Section */
+.services {
+    background-color: #f0f9e8; /* Light greenish background */
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.service-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.service {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 200px;
+    transition: transform 0.3s ease;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+}
+
+.service p {
+    margin: 0;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #2e4053;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #2e4053;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
