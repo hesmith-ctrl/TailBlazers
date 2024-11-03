@@ -4,14 +4,14 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: linear-gradient(135deg, #cfe8a9, #a7d17d, #6b8e5f); /* Nature-inspired gradient */
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a1c4fd, #c2e9fb);
+    background-size: 200% 200%;
+    animation: colorChange 20s ease infinite;
     color: #2e4053;
-    background-size: 400% 400%;
-    animation: gradientAnimation 15s ease infinite;
 }
 
 /* Animated background effect */
-@keyframes gradientAnimation {
+@keyframes colorChange {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
@@ -19,7 +19,7 @@ body {
 
 /* Header */
 header {
-    background-color: #557a5e; /* Earthy green */
+    background-color: rgba(85, 122, 94, 0.8); /* Earthy green with slight transparency */
     color: white;
     text-align: center;
     padding: 2rem 0;
@@ -27,18 +27,18 @@ header {
 
 /* Rotating logo for small header logo */
 .logo-container img {
-    width: 130px; /* Standard logo size */
+    width: 130px;
     height: auto;
     margin-bottom: 1rem;
     animation: rotate 8s infinite linear;
 }
 
-/* Title Logo - Largest element on the page */
+/* Title Logo - Even larger size */
 .title-logo {
-    width: 500px; /* Extra large size */
-    max-width: 80%; /* Responsive scaling on smaller screens */
+    width: 800px; /* Significantly larger size */
+    max-width: 90%; /* Responsive scaling */
     display: block;
-    margin: 2rem auto; /* Center large title logo */
+    margin: 2rem auto;
 }
 
 /* Rotating effect for logos */
@@ -112,7 +112,7 @@ header p {
 
 /* Services Section */
 .services {
-    background-color: #f0f9e8; /* Light greenish background */
+    background-color: #f0f9e8;
     padding: 4rem 2rem;
     text-align: center;
 }
