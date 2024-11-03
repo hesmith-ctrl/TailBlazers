@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Walk with Tail Blazers</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="TailBlazers-logo.nobg.png" alt="Tail Blazers Logo" class="rotating-logo" />
+        </div>
+        <h1>Book a Walk</h1>
+        <p>Choose the perfect walk for your dog!</p>
+    </header>
+
+    <section class="form-section">
+        <form id="walkForm" class="order-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required />
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Your Address" required />
+
+            <label for="walk-type">Walk Type:</label>
+            <select id="walk-type" name="walk_type" required>
+                <option value="short_walk">Short Walk (30 mins)</option>
+                <option value="long_walk">Long Walk (1 hour)</option>
+                <option value="adventure_walk">Adventure Walk (2 hours)</option>
+            </select>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tail Blazers. All rights reserved.</p>
+    </footer>
+</body>
+</html>
