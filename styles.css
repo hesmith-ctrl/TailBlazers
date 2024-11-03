@@ -25,6 +25,7 @@ header {
     padding: 2rem 0;
 }
 
+/* Rotating logo for small header logo */
 .logo-container img {
     width: 130px; /* Standard logo size */
     height: auto;
@@ -32,10 +33,11 @@ header {
     animation: rotate 8s infinite linear;
 }
 
-.large-logo {
-    width: 250px; /* Large logo size */
+/* Title Logo */
+.title-logo {
+    width: 300px; /* Large title logo */
     display: block;
-    margin: 1rem auto; /* Center large logo */
+    margin: 1rem auto; /* Center large title logo */
 }
 
 /* Rotating effect for logos */
