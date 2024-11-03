@@ -33,11 +33,12 @@ header {
     animation: rotate 8s infinite linear;
 }
 
-/* Title Logo */
+/* Title Logo - Largest element on the page */
 .title-logo {
-    width: 300px; /* Large title logo */
+    width: 500px; /* Extra large size */
+    max-width: 80%; /* Responsive scaling on smaller screens */
     display: block;
-    margin: 1rem auto; /* Center large title logo */
+    margin: 2rem auto; /* Center large title logo */
 }
 
 /* Rotating effect for logos */
