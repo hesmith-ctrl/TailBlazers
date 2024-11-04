@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="TailBlazers-logo.nobg" alt="Tail Blazers Logo" class="rotating-logo" />
+            <img src="TailBlazers-logo.nobg.png" alt="Tail Blazers Logo" class="rotating-logo" />
         </div>
         <h1>Walk Receipt</h1>
     </header>
@@ -25,6 +25,7 @@
                 <p id="customerEmail"></p>
                 <p id="customerAddress"></p>
                 <p id="walkType"></p>
+                <p id="totalPrice" class="total-price"></p>
             </div>
         </div>
     </section>
@@ -32,5 +33,19 @@
     <footer>
         <p>&copy; 2024 Tail Blazers. All rights reserved.</p>
     </footer>
+
+    <script>
+        function getUrlParameter(param) {
+            const params = new URLSearchParams(window.location.search);
+            return params.get(param);
+        }
+
+        // Set receipt details based on URL parameters
+        document.getElementById("customerName").innerText = "Name: " + getUrlParameter("name");
+        document.getElementById("customerEmail").innerText = "Email: " + getUrlParameter("email");
+        document.getElementById("customerAddress").innerText = "Address: " + getUrlParameter("address");
+        document.getElementById("walkType").innerText = "Walk Type: " + getUrlParameter("walkType");
+        document.getElementById("totalPrice").innerText = "Total Price: $" + getUrlParameter("totalPrice");
+    </script>
 </body>
 </html>
