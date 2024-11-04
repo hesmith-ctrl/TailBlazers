@@ -16,7 +16,7 @@
     </header>
 
     <section class="form-section">
-        <form id="walkForm" class="order-form">
+        <form id="walkForm" class="order-form" onsubmit="calculateTotal(); return false;">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Your Name" required />
 
@@ -28,10 +28,13 @@
 
             <label for="walk-type">Walk Type:</label>
             <select id="walk-type" name="walk_type" required>
-                <option value="short_walk">Short Walk: $5 for 30 minutes</option>
-                <option value="long_walk">Long Walk: $8 for 1 hour</option>
-                <option value="adventure_package">Adventure Package: 10 walks for $50</option>
+                <option value="5">Short Walk: $5 for 30 minutes</option>
+                <option value="8">Long Walk: $8 for 1 hour</option>
+                <option value="50">Adventure Package: 10 walks for $50</option>
             </select>
+
+            <!-- Hidden input to store calculated price -->
+            <input type="hidden" id="totalPrice" name="totalPrice" />
 
             <button type="submit">Book Now</button>
         </form>
@@ -40,5 +43,12 @@
     <footer>
         <p>&copy; 2024 Tail Blazers. All rights reserved.</p>
     </footer>
-</body>
-</html>
+
+    <script>
+        function calculateTotal() {
+            const walkType = document.getElementById("walk-type");
+            const totalPrice = walkType.value;  // Gets price based on selected walk type
+            document.getElementById("totalPrice").value = totalPrice;  // Sets hidden input
+
+            // Redirect to receipt.html with form data included
+            window.location.href = `receipt.html?name=${encodeURIComponent(document.getElementById("name").value)}&email=${encodeURIComponent(document.getElementById("email").value)}
